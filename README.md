@@ -2,7 +2,7 @@
 
 The code for 《 Learning Spectral Consistency and Detail Refinement for Hyperspectral Image Fusion 》
 
-> **Status**: accepted for publication; the online/camera-ready version will be linked here once available.
+> **Status**: accepted by *IEEE Transactions on Image Processing (TIP)*. The full text will be linked here once the online version is available.
 
 
 ![Language](https://img.shields.io/badge/language-python-brightgreen)
@@ -68,7 +68,6 @@ SCDRNet/
 ├── Utils.py                # data preparation, Gaussian downsample, SSIM, etc.
 ├── calculate_metrics.py    # PSNR / RMSE / SAM / ERGAS / UIQI and AverageMeter
 ├── requirements.txt
-├── SCDRNet.pdf             # paper
 └── SCDRNet.png             # framework figure
 ```
 
