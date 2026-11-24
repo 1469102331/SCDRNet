@@ -69,12 +69,6 @@ SCDRNet/
 └── SCDRNet.png             # framework figure
 ```
 
-## ⚠️ Notes
-
-* `train_cave.py` imports `from loss import *` and calls `calculate_swt_frequency_loss(...)`. This loss module is **not** included in this repository yet — add your own `loss.py` before training, or replace the call with plain `L1Loss` / `MSELoss`.
-* `model.py` currently returns `(fused, pseudo_hsi, spectral_abundance)` while `train_cave.py` unpacks three outputs and supervises the third with the downsampled MSI. Make sure the third output and its supervision are consistent with the version you trained.
-* `read_r()` is called once **per iteration** inside the training loop (`r = read_r().to(device)`), which re-reads `./r.mat` from disk every batch, and the returned `r` is not used afterwards. Move it out of the loop (or delete the line) if you do not need it.
-* `sio` used inside `read_r()` is available through `from Utils import *` (`Utils.py` imports `scipy.io as sio`), so no extra import is required there.
 
 ## Citation
 
